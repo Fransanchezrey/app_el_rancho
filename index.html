@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App El Rancho - Gestión</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+    <link href="fullcalendar.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.17/index.global.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="El Rancho" />
+        </div>
+        <nav class="menu">
+            <a href="#" id="btnEntrenadores" data-seccion="gestionEntrenadores">Gestión de Entrenadores</a>
+            <a href="#" id="btnHorarios" data-seccion="creacionHorarios">Creación de Horarios</a>
+            <a href="#" id="btnCalendario" data-seccion="gestionCalendario">Calendario</a>
+        </nav>
+    </header>
+
+    <!-- Sección Gestión de Entrenadores -->
+    <section id="gestionEntrenadores">
+        <h2>Gestión de Entrenadores</h2>
+        <form id="entrenadorForm">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" required>
+            
+            <button type="submit">Agregar Entrenador</button>
+        </form>
+        
+        <h2>Lista de Entrenadores</h2>
+        <ul id="listaEntrenadores"></ul>
+    </section>
+
+    <!-- Sección Creación de Horarios -->
+    <section id="creacionHorarios" style="display: none;">
+        <h2>Creación de Horarios</h2>
+    
+        <label for="entrenadorHorarios">Selecciona un entrenador:</label>
+        <select id="entrenadorHorarios" class="desplegableEntrenadores">
+            <option value="" selected disabled>-- Selecciona un entrenador --</option>
+            <!-- Opciones de entrenadores se llenarán dinámicamente -->
+        </select>
+    
+        <label for="diaSemana">Día de la semana:</label>
+        <select id="diaSemana">
+            <option value="" selected disabled>-- Seleccionar día --</option>
+            <option value="Lunes">Lunes</option>
+            <option value="Martes">Martes</option>
+            <option value="Miércoles">Miércoles</option>
+            <option value="Jueves">Jueves</option>
+            <option value="Viernes">Viernes</option>
+            <option value="Sábado">Sábado</option>
+            <option value="Domingo">Domingo</option>
+        </select>
+    
+        <label for="horaInicio">Hora de inicio:</label>
+        <select id="horaInicio">
+            <option value="" selected disabled>-- Hora inicio --</option>
+        </select>
+
+        <label for="horaFin">Hora de fin:</label>
+        <select id="horaFin">
+            <option value="" selected disabled>-- Hora fin --</option>
+        </select>
+    
+        <button id="agregarHorario">Agregar Horario</button>
+    
+        <h3>Horarios Asignados</h3>
+        <ul id="listaHorarios"></ul>
+
+        <button id="generarTabla">Generar Tabla</button>  <button id="guardarHorario">Guardar Horario</button>  <button id="resetearTodo">Resetear Todo</button>   
+
+
+        <!-- Contenedor donde aparecerá la tabla -->
+        <div id="tablaHorarios"></div>
+        <br>
+        <button id="descargarPDF">Descargar en PDF</button>
+
+        <br><br>
+
+        <h3>Horarios Guardados</h3>
+        <button id="cargarHorariosGuardados">Cargar Horarios Guardados</button>      <input type="text" id="busqueda" placeholder="Buscar...">
+        <ul id="listaHorariosGuardados"></ul>
+
+
+
+    </section>
+
+    <section id="gestionCalendario" style="display: none;">
+        <h2>Calendario</h2>
+    
+        <div id="calendario"></div>
+    
+        
+    </section>
+    
+</body>
+</html>
