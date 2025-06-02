@@ -1,10 +1,10 @@
 <?php
 // filepath: c:\Users\franc\Desktop\App El Rancho\db.php
 
-$host = 'localhost'; // Servidor local
-$user = 'root';      // Usuario por defecto en XAMPP
-$password = '';      // Contraseña vacía por defecto
-$dbname = 'el_rancho'; // Nombre de tu base de datos
+$host = 'localhost'; 
+$user = 'root';      
+$password = '';      
+$dbname = 'el_rancho'; 
 
 // Crear conexión
 $conn = new mysqli($host, $user, $password, $dbname);

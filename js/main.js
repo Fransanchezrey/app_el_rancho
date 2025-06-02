@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     rellenarHoras();
     inicializarFormulario();
     inicializarNavegacion();
-    desplegableEntrenadores(); // Llamar directamente a la función aquí
+    desplegableEntrenadores(); 
 
     // Agregar evento al botón "Agregar Horario"
     const agregarHorarioBtn = document.getElementById('agregarHorario');

@@ -1,5 +1,5 @@
 <?php
-include 'db.php'; // Archivo de conexión a la base de datos
+include 'db.php'; 
 header('Content-Type: application/json');
 
 // Obtener los datos enviados desde el frontend

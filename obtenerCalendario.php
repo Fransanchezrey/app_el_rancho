@@ -1,5 +1,5 @@
 <?php
-include 'db.php'; // Archivo de conexión a la base de datos
+include 'db.php'; 
 header('Content-Type: application/json');
 
 // Consulta para obtener los datos del calendario
@@ -14,9 +14,9 @@ $result = $conn->query("
 $eventos = [];
 while ($row = $result->fetch_assoc()) {
     $eventos[] = [
-        'title' => $row['entrenador_nombre'], // Nombre del entrenador
-        'start' => $row['fecha'] . 'T' . $row['hora_inicio'], // Fecha y hora de inicio
-        'end' => $row['fecha'] . 'T' . $row['hora_fin'], // Fecha y hora de fin
+        'title' => $row['entrenador_nombre'], 
+        'start' => $row['fecha'] . 'T' . $row['hora_inicio'], 
+        'end' => $row['fecha'] . 'T' . $row['hora_fin'], 
     ];
 }
 

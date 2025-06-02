@@ -1,8 +1,8 @@
 <?php
-include 'db.php'; // Archivo de conexión a la base de datos
+include 'db.php'; 
 header('Content-Type: application/json');
 
-// Verificar que se hayan enviado los datos necesarios
+
 if (!isset($_POST['id'], $_POST['entrenador_id'], $_POST['diaSemana'], $_POST['horaInicio'], $_POST['horaFin'])) {
     echo json_encode(['error' => 'Datos no proporcionados']);
     exit;

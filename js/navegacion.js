@@ -1,6 +1,6 @@
 export function inicializarNavegacion() {
-    const enlaces = document.querySelectorAll('nav a'); // Seleccionar todos los enlaces del menú
-    const secciones = document.querySelectorAll('section'); // Seleccionar todas las secciones
+    const enlaces = document.querySelectorAll('nav a'); 
+    const secciones = document.querySelectorAll('section'); 
 
     // Función para ocultar todas las secciones
     function ocultarSecciones() {
@@ -12,12 +12,12 @@ export function inicializarNavegacion() {
     // Agregar evento a cada enlace
     enlaces.forEach(enlace => {
         enlace.addEventListener('click', (event) => {
-            event.preventDefault(); // Evitar el comportamiento predeterminado del enlace
+            event.preventDefault(); 
 
-            ocultarSecciones(); // Ocultar todas las secciones
+            ocultarSecciones(); 
 
             // Mostrar la sección correspondiente
-            const idSeccion = enlace.dataset.seccion; // Usar el atributo personalizado data-seccion
+            const idSeccion = enlace.dataset.seccion; 
             const seccion = document.getElementById(idSeccion);
             if (seccion) {
                 seccion.style.display = 'block';

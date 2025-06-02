@@ -1,6 +1,6 @@
 <?php
 
-include 'db.php'; // Archivo de conexión a la base de datos
+include 'db.php'; 
 header('Content-Type: application/json');
 
 $id = $_POST['id']; // Obtener el ID del horario a eliminar

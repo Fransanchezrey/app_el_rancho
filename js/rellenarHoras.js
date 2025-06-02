@@ -6,9 +6,9 @@ export function rellenarHoras() {
     horaInicioSelect.innerHTML = '<option value="" selected disabled>-- Hora inicio --</option>';
     horaFinSelect.innerHTML = '<option value="" selected disabled>-- Hora fin --</option>';
 
-    // Generar las opciones de 7:00 a 21:30 en intervalos de 15 minutos
-    const startTime = 7 * 60; // 7:00 en minutos
-    const endTime = 21 * 60 + 30; // 21:30 en minutos
+    // Generar 7:00 a 21:30 en intervalos de 15 minutos
+    const startTime = 7 * 60; 
+    const endTime = 21 * 60 + 30; 
 
     for (let time = startTime; time <= endTime; time += 15) {
         const hours = Math.floor(time / 60);

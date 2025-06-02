@@ -56,7 +56,7 @@ export async function agregarHorarioALista() {
     // Crear un nuevo elemento de lista con los datos del horario
     const li = document.createElement('li');
     li.textContent = `Entrenador: ${entrenadorNombre}, Día: ${diaSemana}, De: ${horaInicio} a ${horaFin}`;
-    li.dataset.entrenadorId = entrenadorId; // Guardar el ID del entrenador en el elemento
+    li.dataset.entrenadorId = entrenadorId; 
     li.dataset.diaSemana = diaSemana;
     li.dataset.horaInicio = horaInicio;
     li.dataset.horaFin = horaFin;
@@ -96,7 +96,7 @@ export async function guardarHorarios() {
     const result = await response.json();
     if (result.success) {
         alert('Horarios guardados correctamente.');
-        listaHorarios.innerHTML = ''; // Limpiar la lista después de guardar
+        listaHorarios.innerHTML = ''; 
     } else {
         alert('Error al guardar los horarios: ' + result.error);
     }
@@ -105,7 +105,7 @@ export async function guardarHorarios() {
 
 export async function cargarHorariosGuardados() {
     const listaHorariosGuardados = document.getElementById('listaHorariosGuardados');
-    listaHorariosGuardados.innerHTML = ''; // Limpiar la lista antes de llenarla
+    listaHorariosGuardados.innerHTML = ''; 
 
     // Obtener los horarios guardados desde el backend
     const response = await fetch('obtenerHorarios.php');
@@ -114,9 +114,9 @@ export async function cargarHorariosGuardados() {
     horarios.forEach(horario => {
         const li = document.createElement('li');
         li.textContent = `Entrenador: ${horario.entrenadorNombre}, Día: ${horario.diaSemana}, De: ${horario.horaInicio} a ${horario.horaFin}`;
-        li.dataset.id = horario.id; // Guardar el ID del horario en el elemento
+        li.dataset.id = horario.id; 
 
-        // Opcional: Agregar botones para editar o eliminar
+        
         const btnEliminar = document.createElement('button');
         btnEliminar.textContent = 'Eliminar';
         btnEliminar.style.marginLeft = '10px';

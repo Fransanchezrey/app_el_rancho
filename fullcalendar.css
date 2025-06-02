@@ -24,24 +24,24 @@
     border-radius: 3px;
 }
 
-/* Estilo para los botones del FullCalendar */
+
 .fc .fc-button {
-    background-color: #b47c14; /* Mismo color que los eventos */
-    color: white; /* Texto blanco */
-    border: none; /* Sin bordes */
-    border-radius: 3px; /* Bordes redondeados */
-    padding: 5px 10px; /* Espaciado interno */
-    font-size: 14px; /* Tamaño de fuente */
-    font-weight: bold; /* Texto en negrita */
-    cursor: pointer; /* Cambiar el cursor al pasar el ratón */
-    transition: background-color 0.3s ease; /* Transición suave */
+    background-color: #b47c14; 
+    color: white; 
+    border: none; 
+    border-radius: 3px; 
+    padding: 5px 10px; 
+    font-size: 14px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
 }
 
 .fc .fc-button:hover {
-    background-color: #9a6a10; /* Color más oscuro al pasar el ratón */
+    background-color: #9a6a10; 
 }
 
 .fc .fc-button:disabled {
-    background-color: #ddd; /* Color gris para botones deshabilitados */
-    cursor: not-allowed; /* Cursor no permitido */
+    background-color: #ddd; 
+    cursor: not-allowed; 
 }

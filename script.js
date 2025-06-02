@@ -17,8 +17,8 @@ document.getElementById('entrenadorForm').addEventListener('submit', async (e) =
     const result = await response.json();
     if (result.success) {
         alert(result.success);
-        // Aquí puedes actualizar la lista de entrenadores
-        cargarEntrenadores(); // Llamar a la función para actualizar la lista
+        
+        cargarEntrenadores(); 
     } else {
         alert(result.error);
     }
@@ -30,7 +30,7 @@ async function cargarEntrenadores() {
     const entrenadores = await response.json();
 
     const lista = document.getElementById('listaEntrenadores');
-    lista.innerHTML = ''; // Limpiar la lista
+    lista.innerHTML = ''; 
 
     entrenadores.forEach(entrenador => {
         const li = document.createElement('li');
@@ -60,7 +60,7 @@ async function eliminarEntrenador(id) {
     const result = await response.json();
     if (result.success) {
         alert(result.success);
-        cargarEntrenadores(); // Actualizar la lista después de eliminar
+        cargarEntrenadores(); 
     } else {
         alert(result.error);
     }
